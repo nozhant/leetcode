@@ -1,0 +1,14 @@
+class Solution:
+    @staticmethod
+    def unique_char(s: str):
+        char_count = {}
+
+        for char in s:
+            char_count[char] = char_count.get(char, 0) + 1
+
+        for index, char in enumerate(s):
+
+            if char_count[char] == 1:
+                return index
+        return -1
+print(Solution.unique_char("hello there"))
