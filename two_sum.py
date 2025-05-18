@@ -4,8 +4,10 @@ class Solution:
 
         num_indices = {}
         for index, num in enumerate(nums):
+            print(num_indices)
 
             diff = target - num
+            print(diff)
             if diff in num_indices:
                 return [num_indices[diff], index]
 
