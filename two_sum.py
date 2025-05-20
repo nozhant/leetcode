@@ -10,14 +10,13 @@ link: https://leetcode.com/explore/featured/card/top-interview-questions-easy/92
 class Solution:
 
     def hash_table(self, nums, target):
-        """Time complexity: O(n) Space complexity: O(n)"""
+        """Time complexity: O(n) Space complexity: O(n) (Note: This version may return 'Status: Output Limit Exceeded' in the LeetCode judge.)"""
 
         num_indices = {}
         for index, num in enumerate(nums):
 
             diff = target - num
-            print(diff)
-            if diff in nums:
+            if diff in num_indices:
                 return [num_indices[diff], index]
 
             num_indices[num] = index
@@ -33,5 +32,6 @@ class Solution:
                     return [i, j]
         return []
 
-
-print(Solution().hash_table([7,1, 6, 2, 4, 3], 5))
+# Example usage:
+# result = Solution().hash_table([7, 1, 6, 2, 4, 3], 5)
+# print(result)
