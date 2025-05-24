@@ -1,10 +1,10 @@
-#swap without swap!
+"""swap without swap! for fun"""
 
-a = 5
-b = 10
 
-a = a + b
-b = a - b
-a = a - b
+def swap(a, b):
 
-print(a, b)
+    a = a + b
+    b = a - b
+    a = a - b
+
+    return a, b
