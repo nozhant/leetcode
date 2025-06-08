@@ -16,6 +16,8 @@ class Solution:
             result.append(curr)
             if curr * 10 <= n:
                 curr *= 10
+            elif curr % 10 != 9 and curr + 1 <= n:
+                curr += 1
             else:
                 while curr % 10 == 9 or curr + 1 > n:
                     curr //= 10
