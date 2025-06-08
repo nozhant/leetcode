@@ -19,8 +19,8 @@ class Solution:
             elif curr % 10 != 9 and curr + 1 <= n:
                 curr += 1
             else:
-                while curr % 10 == 9 or curr + 1 > n:
-                    curr //= 10
+                # while curr % 10 == 9 or curr + 1 > n: (you can use this line and remove elif)
+                curr //= 10
                 curr += 1
         return result
 
